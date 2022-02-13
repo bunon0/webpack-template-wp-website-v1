@@ -1,7 +1,7 @@
 module.exports = {
   plugins: ["stylelint-scss", "stylelint-selector-bem-pattern"],
   extends: ["stylelint-config-standard-scss", "stylelint-config-prettier"],
-  ignoreFiles: ["node_modules", "**/assets/**"],
+  ignoreFiles: ["node_modules/**/*.css", "**/assets/**/*.css"],
   rules: {
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
