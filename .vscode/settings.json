@@ -1,0 +1,23 @@
+{
+  "stylelint.validate": ["css", "scss"],
+  "scss.validate": false,
+  "css.validate": false,
+  "editor.formatOnSave": false,
+  "[php]": {
+    "editor.formatOnSave": true
+  },
+  "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "eslint.validate": ["javascript"],
+  "cSpell.ignorePaths": [
+    "**/package-lock.json",
+    "**/yarn.lock",
+    "**/node_modules/**",
+    ".vscode",
+    "**/assets/**"
+  ]
+}
+
