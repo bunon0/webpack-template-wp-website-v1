@@ -19,7 +19,9 @@
     "**/node_modules/**",
     "**/webpack.config.js/**",
     ".vscode",
-    "**/assets/**"
+    "**/assets/**",
+    "src/js/libs",
+    "src/scss/libs"
   ]
 }
 

@@ -3,7 +3,8 @@ package.json
 package-lock.json
 yarn.lock
 dist
-wp-theme
+wptheme
+src/js/libs
 
 
 

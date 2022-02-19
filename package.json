@@ -24,6 +24,8 @@
 		"@squoosh/lib": "^0.4.0",
 		"autoprefixer": "^10.4.2",
 		"babel-loader": "^8.2.3",
+		"browser-sync": "^2.27.7",
+		"browser-sync-webpack-plugin": "^2.3.0",
 		"clean-webpack-plugin": "^4.0.0",
 		"copy-webpack-plugin": "^10.2.4",
 		"css-declaration-sorter": "^6.1.4",

@@ -5,8 +5,12 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
-const wpThemeAssets = "./wp-theme/assets/";
+const wpThemeName = 'wptheme'
+const wpDomain = `http://${wpThemeName}.local/`
+const wpThemeRoot = `./${wpThemeName}/`
+const wpThemeAssets = `./${wpThemeName}/assets/`;
 
 const app = {
   mode: "development",
@@ -72,6 +76,13 @@ const app = {
   target: ["web", "es5"],
 
   plugins: [
+    new BrowserSyncPlugin({
+      proxy: wpDomain,
+      files:[
+        `${wpThemeRoot}**/*.php`,
+        `src/`,
+      ]
+    }),
     new CleanWebpackPlugin({}),
     new MiniCssExtractPlugin({
       filename: "./css/styles.css",
@@ -81,6 +92,10 @@ const app = {
         {
           from: `${path.resolve(__dirname, "src")}/images/`,
           to: `${path.resolve(__dirname, wpThemeAssets)}/images/`,
+        },
+        {
+          from: `${path.resolve(__dirname, "src")}/public/`,
+          to: `${path.resolve(__dirname, wpThemeRoot)}`,
         },
       ],
     }),
